@@ -1,3 +1,4 @@
+<script>
 var $_GET = {};
 if(location.href.toString().indexOf('?') !== -1) {
 var query = location.href.toString().replace(/^.*?\?/, '').replace(/#.*$/, '').split('&');
@@ -20,3 +21,4 @@ if (v == latestVersion) {
 } else {
 msg('Please update Torngat to the latest version ('+latestVersion+').');
 }
+</script>
