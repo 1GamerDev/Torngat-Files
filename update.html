@@ -1,0 +1,22 @@
+var $_GET = {};
+if(location.href.toString().indexOf('?') !== -1) {
+var query = location.href.toString().replace(/^.*?\?/, '').replace(/#.*$/, '').split('&');
+for(var i=0, l=query.length; i<l; i++) {
+var aux = decodeURIComponent(query[i]).split('=');
+$_GET[aux[0]] = aux[1];
+}
+}
+var v = $_GET['version'].toString();
+var latestVersion = "1.2.1";
+var latestVersionToInt = parseInt(latestVersion.replace(/./g, ""));
+function msg(message) {
+var alert = document.createElement("IFRAME");
+alert.setAttribute("src", 'data:text/plain,');
+document.documentElement.appendChild(alert); window.frames[0].window.alert(message); alert.parentNode.removeChild(alert);
+}
+var versionToInt = parseInt(v.replace(/./g, ""));
+if (v == latestVersion) {
+//msg(version);
+} else {
+msg('Please update Torngat to the latest version ('+latestVersion+').');
+}
