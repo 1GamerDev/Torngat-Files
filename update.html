@@ -1,3 +1,7 @@
+<head>
+<title>Torngat Update Alert</title>
+</head>
+<body>
 <script>
 var $_GET = {};
 if(location.href.toString().indexOf('?') !== -1) {
@@ -7,6 +11,7 @@ var aux = decodeURIComponent(query[i]).split('=');
 $_GET[aux[0]] = aux[1];
 }
 }
+if ($_GET['version']) {
 var v = $_GET['version'].toString();
 var latestVersion = "1.2.1";
 var latestVersionToInt = parseInt(latestVersion.replace(/./g, ""));
@@ -21,4 +26,7 @@ msg(v);
 } else {
 msg('Please update Torngat to the latest version ('+latestVersion+').');
 }
+}
 </script>
+This page is used to display update alerts.
+</body>
