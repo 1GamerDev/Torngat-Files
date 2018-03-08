@@ -21,7 +21,7 @@ alert.setAttribute("src", 'data:text/plain,');
 document.documentElement.appendChild(alert); window.frames[0].window.alert(message); alert.parentNode.removeChild(alert);
 }
 var versionToInt = parseInt(v.replace(/./g, ""));
-if (v == latestVersion) {
+if (v == latestVersion || v == "2.0.0") {
 //msg(v);
 } else {
 msg('Please update Torngat to the latest version ('+latestVersion+').');
