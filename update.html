@@ -1,4 +1,3 @@
-<!-- Torngat v1 Only -->
 <head>
 <title>Torngat Update Alert</title>
 </head>
@@ -14,7 +13,7 @@ $_GET[aux[0]] = aux[1];
 }
 if ($_GET['version']) {
 var v = $_GET['version'].toString();
-var latestVersion = "1.3.3";
+var latestVersion = "2.0.1";
 var latestVersionToInt = parseInt(latestVersion.replace(/./g, ""));
 function msg(message) {
 var alert = document.createElement("IFRAME");
@@ -22,7 +21,7 @@ alert.setAttribute("src", 'data:text/plain,');
 document.documentElement.appendChild(alert); window.frames[0].window.alert(message); alert.parentNode.removeChild(alert);
 }
 var versionToInt = parseInt(v.replace(/./g, ""));
-if (v == latestVersion || v == "2.0.0") {
+if (v == latestVersion) {
 //msg(v);
 } else {
 msg('Please update Torngat to the latest version ('+latestVersion+').');
